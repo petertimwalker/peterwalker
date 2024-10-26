@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavLink = ({
   href,
@@ -7,19 +10,28 @@ const NavLink = ({
 }: {
   href: string;
   children: React.ReactNode;
-}) => (
-  <li className="mx-4">
-    <Link href={href} legacyBehavior>
-      <a className="text-slate-300 no-underline text-lg dark:text-gray-800">
-        {children}
-      </a>
-    </Link>
-  </li>
-);
+}) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <li className="mx-4">
+      <Link href={href} legacyBehavior>
+        <a
+          className={`dark:text-slate-300 text-lg text-gray-800 ${
+            isActive ? "underline underline-offset-8 " : ""
+          }`}
+        >
+          {children}
+        </a>
+      </Link>
+    </li>
+  );
+};
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 dark:bg-slate-300 p-4">
+    <nav className="dark:bg-gray-800 bg-slate-300 p-4 border-b dark:border-slate-300 border-gray-800">
       <ul className="flex justify-around list-none m-0 p-0">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/blog">Blog</NavLink>
