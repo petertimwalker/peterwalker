@@ -8,7 +8,7 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ title, description, children }) => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 text-black  dark:bg-black dark:text-white">
+    <div className="min-h-screen bg-slate-300 p-8 text-gray-800  dark:bg-gray-800 dark:text-slate-300">
       <header className="mb-8">
         <h1 className="text-3xl font-bold mb-2">{title}</h1>
         <p className="text-lg ">{description}</p>
