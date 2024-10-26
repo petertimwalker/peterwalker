@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/NavBar";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 import ThemeProvider from "@/utils/ThemeProvider";
 import Footer from "./components/Footer";
 
@@ -36,7 +35,6 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <ThemeSwitcher />
         </ThemeProvider>
       </body>
     </html>
