@@ -31,11 +31,12 @@ const NavLink = ({
 
 const Navbar = () => {
   return (
-    <nav className="dark:bg-gray-800 bg-slate-300 p-4 border-b dark:border-slate-300 border-gray-800">
+    <nav className="dark:bg-gray-800 bg-slate-300 p-2 border-b dark:border-slate-300 border-gray-800">
       <ul className="flex justify-around list-none m-0 p-0">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/blog">Blog</NavLink>
-        <NavLink href="/now">Now</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/projects">Projects</NavLink>
       </ul>
     </nav>
   );
