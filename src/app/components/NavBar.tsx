@@ -18,7 +18,7 @@ const NavLink = ({
     <li className="ml-4">
       <Link href={href} legacyBehavior>
         <a
-          className={`dark:text-slate-300 text-lg text-gray-800 ${
+          className={`dark:text-slate-300 text-sm text-gray-800 ${
             isActive ? "underline underline-offset-8 " : ""
           }`}
         >
