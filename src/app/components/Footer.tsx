@@ -90,12 +90,14 @@ const FooterLogo = ({
 
 const Footer = () => {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 dark:bg-gray-800 bg-slate-300 p-4 border-t dark:border-slate-300 border-gray-800">
-      <ul className="flex justify-between items-center list-none m-0 p-0">
-        <FooterLogo logo={GitHub} href="/now" />
-        <FooterLogo logo={LinkedIn} href="/now" />
-        <FooterLogo logo={Twitter} href="/now" />
-        <li>
+    <nav className="fixed bottom-0 left-0 right-0 dark:bg-gray-800 bg-slate-300 p-2 border-t dark:border-slate-300 border-gray-800">
+      <ul className="flex justify-between items-center list-none">
+        <div className="flex space-x-4">
+          <FooterLogo logo={GitHub} href="/now" />
+          <FooterLogo logo={LinkedIn} href="/now" />
+          <FooterLogo logo={Twitter} href="/now" />
+        </div>
+        <li className="ml-auto">
           <ThemeSwitcher />
         </li>
       </ul>
