@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 dark:bg-gray-800 bg-slate-300 p-2 border-b dark:border-slate-300 border-gray-800">
       <ul className="flex justify-between list-none m-0 p-0">
         <Link href="/" className={`dark:text-slate-300 text-lg text-gray-800`}>
-          Peter Walker
+          Peter T. Walker
         </Link>
         <div className="flex ">
           <NavLink href="/blog">Blog</NavLink>
